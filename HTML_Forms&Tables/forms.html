@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+
+    <form action="/tacos">
+        <p>
+            <label for="username">Enter a Username: </label>
+            <input name="username" id="username" type="text" placeholder="username">
+        </p>
+        <p>
+            <label for="password">Enter a password: </label>
+            <input name="password" id="password" type="password" placeholder="password">
+        </p>
+        <button>IN THE MIDDLE!</button>
+        <p>
+            <label for="color">Enter a color: </label>
+            <input name="color" id="color" type="color">
+        </p>
+
+        <p>
+            <!-- 이 방법도 가능하지만, 중첩을 쓰지 않는 것이 표준이고 더 흔하게 쓰인다.  -->
+            <label>
+                Enter a Number:
+                <input name="num" type="number" placeholder="enter a number" min="1" max="1000" step="2">
+            </label>
+        </p>
+        <p>
+            <input type="time">
+        </p>
+        <button>Submit!!</button>
+        <!-- <button type="submit">PLEASE DO NOT SUBMIT THE FORM</button> -->
+        <input type="submit" value="Click Me!">
+    </form>
+
+    <hr>
+    <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to everything</label>
+        <p>
+            <!-- value: 제출했을 때 서버에 전송되는 값  -->
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="veg" selected>Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese: </label>
+            <input type="range" id="cheese" min="1" max="100" value="75" step="5" name="cheese_level">
+        </p>
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea name="Requests?" id="requests" cols="30" rows="10" placeholder="Type something here"></textarea>
+        </p>
+        <button>Submit</button>
+
+        <h2>Validations Demo</h2>
+        <form action="/dummy">
+            <label for="first">Enter First Name</label>
+            <input type="text" name="first" required>
+            <p>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+            </p>
+            <p>
+                <label for="url">Url</label>
+                <input type="url" id="url" required>
+            </p>
+
+            <button>Submit</button>
+        </form>
+    </form>
+</body>
+
+</html>
