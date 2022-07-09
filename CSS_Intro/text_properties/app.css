@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    font-size: normal;
+    text-decoration: #f78120 underline wavy;
+    letter-spacing: 15px;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* 쉼표로 구분 - 사이트 사용자에게 해당 폰트가 없는 경우 순서대로 적용 */
+    font-family: fantasy;
+    /* 시스템이 골라줌! */
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 2;
+    /* 줄간격 */
+}
