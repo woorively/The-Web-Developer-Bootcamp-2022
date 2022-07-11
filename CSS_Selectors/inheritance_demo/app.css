@@ -1,0 +1,21 @@
+body {
+    color: purple;
+}
+
+h1 {
+    color: blue;
+}
+
+section {
+    color: aqua;
+}
+
+form {
+    color: greenyellow;
+}
+
+/* 상위 항목을 상속받게 하는 inherit */
+button,
+input {
+    color: inherit;
+}
