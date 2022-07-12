@@ -1,0 +1,18 @@
+section {
+    width: 80%;
+    height: 800px;
+    /* background-image: url("https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80");
+    background-size: cover; => 최대한 이미지를 배경에 맞춰줌
+    background-position: top; =>  배경의 시작점 조정 */
+
+    /* 유의할 점:
+    background-size를 사용하려면 
+    position 뒤에 /와 함께 넣어줘야 함 */
+    background: center/cover url("https://images.unsplash.com/photo-1564442038901-4f9a19d3d456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1227&q=80");
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}

@@ -1,0 +1,51 @@
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+    /* transition => 애니메이션 효과  
+       delay, 각각의 특성 원하는 부분만 지정 가능 
+       default는 no delay */
+    transition: background-color 1s ease-in, border-radius 2s;
+}
+
+.circle:hover {
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+
+section div {
+    height: 100px;
+    width: 100px;
+    background-color: turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:hover div {
+    margin-left: 500px;
+}
+
+
+/* 
+** timing func  
+ease-in : 천천히 시작돼서 가속이 빨리 붙음
+ease-out : 빨리 시작돼서 속도가 점차 느려짐
+
++ easings.net => 타이밍 기능의 차트
+*/
+div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}

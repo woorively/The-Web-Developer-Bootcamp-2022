@@ -1,0 +1,26 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+
+    /* alpha가 1이면 불투명, 0이면 투명, 해당 요소에만 적용되어 영향 */
+    /* background-color: rgba(255, 255, 255, 0.7); */
+
+    /* 16진법 -> 00: 완전 투명 ~ FF: 완전 불투명  */
+    /* FF는 쓸 필요 없음  */
+    background-color: #00cca0FF;
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+
+    /* 전체 요소가 영향을 받음  */
+    opacity: 0.5;
+}

@@ -1,0 +1,19 @@
+img {
+    width: 30%;
+    /* margin: 1.6666666%; */
+    /* 사진이 차지하고 난 10%의 공간을 
+       각 사진 당 왼쪽 오른쪽의 총 6으로 나누어 여백처리  */
+    margin: calc(10%/6);
+}
+
+nav {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+
+    /* 마크업을 변경하지 않으면서 전부 대문자로 변경 */
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: calc(10%/6);
+    padding: 1.2em 0;
+}

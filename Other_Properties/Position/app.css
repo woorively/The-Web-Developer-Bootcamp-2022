@@ -1,0 +1,60 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+#middle {
+    background-color: #81b29a;
+}
+
+
+#static #middle {
+    /* 움직이지 않음, 고정  */
+    position: static;
+    top: 100px;
+}
+
+
+#relative #middle {
+    /* 원래 위치로부터 상대적인 위치로 이동  */
+    position: relative;
+
+    /* 아래로 이동, 위로 이동하려면 음수값 */
+    top: 50px;
+
+    /* 오른쪽으로 이동, 왼쪽으로 이동하려면 음수값  */
+    left: 50px;
+}
+
+#absolute {
+    /* 조상 위치 지정  */
+    position: relative;
+}
+
+#absolute #middle {
+    /* 문서에서 요소가 제거되고 공간도 배정되지 않음  */
+    /* 그러나, 가까이 위치한 조상이 있다면 해당 조상을 기준으로 하거나 
+       조상이 없다면 body를 기준으로 상대적인 위치에 배치됨  */
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+#fixed #middle {
+    /* 그 자리에 계속 유지됨, 공간도 차지하지 않고 초기 블록의 상대적 위치
+       즉, 스크롤을 움직여도 계속 위치해있음 => 네비게이션 바 역할
+       absolute랑 비슷하지만, 부모 요소같은 관계는 없음  */
+    position: fixed;
+    top: 0;
+    left: 400px;
+}
+
+/* 
+position sticky: 
+처음에는 고정하지 않았다가 나중에 고정되게 할 수 있는 기능  
+*/
